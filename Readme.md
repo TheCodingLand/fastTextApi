@@ -12,7 +12,7 @@ Instructions for now :
   docker run -p 5000:5000 -v fasttext:/data fasttext
 
 
-open a browser and go to <dockerhost>:5000
+open a browser and go to yourdockerhost:5000
 
 I included an example model, named language, with verson 0, supervised, quantized :
 
@@ -55,7 +55,7 @@ you can add your models, i'll provide better ways for this later, but for now:
 
 then you can put model files into 
 
-/var/lib/docker/volumes/fasttext/_data/models/<modelname>/<modelversion>/model.ftz or model.bin
+/var/lib/docker/volumes/fasttext/_data/models/{modelname}/{modelversion}/model.ftz or model.bin
 
 and query them like :
 {
