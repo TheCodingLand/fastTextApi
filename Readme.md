@@ -4,24 +4,17 @@ It will grow in features and will get a frontend for loading models, predicting,
 
 Instructions for now : 
 
-- chose a place to store the volume (replace /my/data/folder/ below)
-- chose a model name for your model
-- you can have several versions (integer value only for now)
-- quantized or not
-- only supervised for now
-
-Put your models into /my/data/folder/models/<modelname>/<modelversion>/model.ftz or model.bin
-
-then do : 
   git clone https://github.com/TheCodingLand/fastTextApi
   cd fastTextApi
-  docker build .
-  docker run -p 5000:5000 -v /my/data/folder:/data <containerid>
+  docker build . -t fasttext
+  docker run -p 5000:5000 -v fasttext:/data fasttext
 
 
 open a browser and go to <dockerhost>:5000
 
-First, load your model, you can try the default one with language classification that I configured for testing :
+I included an example model, named language, with verson 0, supervised, quantized :
+
+load the model :
 "{
   "name": "language",
   "version": 0,
@@ -29,9 +22,7 @@ First, load your model, you can try the default one with language classification
   "quantized": true
 }"
 
-
-then use the predict post method :
-
+try the predict post method :
 
 {
   "name": "language",
@@ -40,6 +31,34 @@ then use the predict post method :
   "nbofresults": 2
 }
 
+returns :
+{
+  "status": "success",
+  "results": [
+    {
+      "category": "en",
+      "confidence": 0.9863510129824254
+    },
+    {
+      "category": "fr",
+      "confidence": 0.005755515951242966
+    }
+  ]
+}
 
 
 This is the minimal working version. please give me some time before opening issues as I'm working on this actively. cheers.
+
+you can add your models, i'll provide better ways for this later, but for now:
+
+then you can put model files into 
+
+/var/lib/docker/volumes/fasttext/_data/models/<modelname>/<modelversion>/model.ftz or model.bin
+
+and query them like :
+{
+  "name": "modelname",
+  "version": version,
+  "text": "my text to test",
+  "nbofresults": x number of results I want
+}
