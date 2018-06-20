@@ -2,6 +2,8 @@ This is a very simple python api implementation for fastText https://github.com/
 
 It will grow in features and will get a frontend for loading models, predicting, training and testing
 
+
+
 Instructions for now : 
 
   git clone https://github.com/TheCodingLand/fastTextApi
@@ -47,7 +49,7 @@ returns :
 }
 
 
-This is the minimal working version. please give me some time before opening issues as I'm working on this actively. cheers.
+
 
 you can add your models, i'll provide better ways for this later, but for now:
 
@@ -62,3 +64,6 @@ and query them like :
   "text": "my text to test",
   "nbofresults": x number of results I want
 }
+
+
+This is the minimal working version. please give me some time before opening issues as I'm working on this actively. cheers.
