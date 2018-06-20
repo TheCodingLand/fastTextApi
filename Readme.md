@@ -7,14 +7,17 @@ It will grow in features and will get a frontend for loading models, predicting,
 Instructions for now : 
 
   git clone https://github.com/TheCodingLand/fastTextApi
+
   cd fastTextApi
+
   docker build . -t fasttext
+
   docker run -p 5000:5000 -v fasttext:/data fasttext
 
 
 open a browser and go to yourdockerhost:5000
 
-I included an example model, named language, with verson 0, supervised, quantized :
+I included an example model, named language, with version 0, supervised, quantized :
 
 load the model :
 "{
