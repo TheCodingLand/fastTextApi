@@ -1,10 +1,10 @@
-This is a very simple python api implementation for fastText https://github.com/facebookresearch/fastText.git
+# This is a very simple python api implementation for fastText https://github.com/facebookresearch/fastText.git
 
-It will grow in features and will get a frontend for loading models, predicting, training and testing
+It is intended as an small proof of concept of a flask API exposing trained models through a prediction api.
 
 
 
-Instructions for now : 
+## Instructions :
 
   git clone https://github.com/TheCodingLand/fastTextApi
 
@@ -52,11 +52,7 @@ returns :
 }
 
 
-
-
-you can add your models, i'll provide better ways for this later, but for now:
-
-then you can put model files into 
+you can add your models files into 
 
 /var/lib/docker/volumes/fasttext/_data/models/{modelname}/{modelversion}/model.ftz or model.bin
 
@@ -69,4 +65,4 @@ and query them like :
 }
 
 
-This is the minimal working version. please give me some time before opening issues as I'm working on this actively. cheers.
+This is the minimal working version. 
