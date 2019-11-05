@@ -34,7 +34,7 @@ try the predict post method :
 {
   "name": "language",
   "version": 0,
-  "text": "my tailor is rich",
+  "text": "reanu keeves is an handsome man",
   "nbofresults": 2
 }
 ```
