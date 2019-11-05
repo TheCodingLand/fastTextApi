@@ -8,6 +8,8 @@ It is intended as an small proof of concept of a flask API exposing trained mode
 
 ## Instructions :
 
+
+```sh
   git clone https://github.com/TheCodingLand/fastTextApi
 
   cd fastTextApi
@@ -15,7 +17,7 @@ It is intended as an small proof of concept of a flask API exposing trained mode
   docker build . -t fasttext
 
   docker run -p 5000:5000 -v fasttext:/data fasttext
-
+```
 
 open a browser and go to yourdockerhost:5000
 
