@@ -1,6 +1,8 @@
-# This is a very simple python api implementation for fastText https://github.com/facebookresearch/fastText.git
+# fastTextApi
 
-It is intended as an small proof of concept of a flask API exposing trained models through a prediction api.
+## This is a very simple python api implementation for fastText https://github.com/facebookresearch/fastText.git
+
+It is intended as an small proof of concept of a flask API exposing trained models.
 
 
 
